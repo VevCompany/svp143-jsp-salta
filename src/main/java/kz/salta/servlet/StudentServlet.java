@@ -3,6 +3,7 @@ package kz.salta.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -43,8 +44,22 @@ public class StudentServlet extends HttpServlet {
     		out.println("<body>");
     		out.println("</body>");
     		out.println("<h1>Список студентов !!!</h1>");
+    		out.println("<table>");
+    		out.println("<tr>");
+    		out.println("<th><p>ФИО</p></th>");
+    		out.println("<th><p>Группа</p></th");
+    		out.println("</tr>");
+    		for (Student st:list) {
+    			out.println("<tr>");
+    			out.println("<td><p>"+st.getName()+"</p></td>");
+    			out.println("<td><p>"+st.getGroup()+"</p></td>");
+    			out.println("</tr>");
+			}
+    		out.println("</table>");
     		out.println("</body>");
     		out.println("</head>");
+    		
+    		
     	}finally {
     		out.close();
     	}
