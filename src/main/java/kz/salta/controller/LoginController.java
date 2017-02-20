@@ -1,4 +1,4 @@
-package kz.salta.servlet;
+package kz.salta.controller;
 
 import java.io.IOException;
 
@@ -14,13 +14,13 @@ import kz.salta.model.User;
 /**
  * Servlet implementation class LoginServlet
  */
-public class LoginServlet extends HttpServlet {
+public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public LoginController() {
         super();
     }
 	

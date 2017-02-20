@@ -3,7 +3,7 @@
 <%@ include file="../jsp/head.jsp" %>
 
 <h1>${title}</h1>
-<form action="StudentServlet" method="post">
+<form action="StudentController" method="post">
 <input type="text" name="name">
 <input type="submit" value="Submit">
 </form>
@@ -20,7 +20,7 @@
 		<td><c:out value="${student.name}"/></td>
 	</tr>
 	<tr>
-		<td><c:out value="${student.group}"/></td>
+		<td><c:out value="${student.groupName}"/></td>
 	</tr>
 </c:forEach>
 <c:if test="${empty students }">

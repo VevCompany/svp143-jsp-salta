@@ -1,7 +1,7 @@
 <html>
 <body>
 <h1>${title}</h1>
-<form action="LoginServlet" method="post">
+<form action="LoginController" method="post">
 <label><span class="required"></span></label>
 <input type="text" name="username" required>
 <label><span class="password"></span></label>
