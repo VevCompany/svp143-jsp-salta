@@ -11,7 +11,7 @@ public static ArrayList<Student> getStudents(){
 		ArrayList<Student> list = new ArrayList<Student>();
 		Student s = null;
 		for(int i = 0; i < 10; i++){
-			s = new Student("Name"+i, "Group_"+i);
+//			s = new Student("Name"+i, "Group_"+i);
 			list.add(s);
 		}
 		
