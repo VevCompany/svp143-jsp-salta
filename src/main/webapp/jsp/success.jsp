@@ -2,47 +2,41 @@
 
 <%@ include file="../jsp/head.jsp" %>
 
+<c:url var="createStudentUrl" value="StudentController?newRecord=1" />
+<c:url var="updateStudentUrl" value="StudentController?newRecord=0&id=" />
+
 <div class="row">
-<div class="col-md-6">
 <h1>${title}</h1>
 </div>
-</div>
-
 
 <div class="row">
-<div class="col-md-6">
 <form action="StudentController" method="post">
-<input class="form-control" type="text" name="name">
-<button type="submit" class="btn btn-primary">Search</button>
+<input type="text" name="name">
+<button type="submit">Search</button>
 </form>
-
-
-<form class="form-inline">
-  <div class="form-group has-success has-feedback">
-    <input type="text" class="form-control" id="studentSearch" aria-describedby="studentSearchStatus" name="name">
-    <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
-    <span id="studentSearchStatus" class="sr-only">(success)</span>
-  </div>
-</form>
-
-</div>
 </div>
 
-
+<a href="${createStudentUrl}" class="sa-button-create">Добавить</a>
 <div class="row">
-<div class="col-md-6">
-<table class="table table-striped table-hover"">
-<thead>
+<table class="sa-table">
+<thead class="sa-table-header">
 <tr>
+<th>ID</th>
 <th>ФИО</th>
 <th>Группа</th>
+<th>Возраст</th>
+<th>Операции</th>
 </tr>
 </thead>
-<tbody>
+<tbody class="sa-table-body">
 <c:forEach var="student" items="${students}">
 	<tr>
+		<td><c:out value="${student.id}"/></td>
 		<td><c:out value="${student.name}"/></td>
 		<td><c:out value="${student.groupName}"/></td>
+		<td><c:out value="${student.age}"/></td>
+		<td><div><a href="${updateStudentUrl}${student.id}">Изменить</a></div>
+		<div><a href="#">Удалить</a></div></td>
 	</tr>
 </c:forEach>
 <c:if test="${empty students }">
@@ -50,7 +44,6 @@
 </c:if>
 </tbody>
 </table>
-</div>
 </div>
 
 

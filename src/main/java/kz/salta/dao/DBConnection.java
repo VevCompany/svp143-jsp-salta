@@ -29,6 +29,7 @@ final public class DBConnection {
 	    try {
 	    	//Создаём соединение
 	        this.dbConnection = DriverManager.getConnection(DB_URL, USER, PASS);
+	        this.dbConnection.setAutoCommit(true);
 	        System.out.println("Соединение установлено");
 	    } catch (SQLException e) {
 	        e.printStackTrace();

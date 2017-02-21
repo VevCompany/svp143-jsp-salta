@@ -1,13 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ include file="../jsp/head.jsp" %>
-<div class="row">
-	<div class="col-md-3 col-md-offset-4">
-		<h1>${title}</h1>
-	</div>
+<div class="sa-row">
+	<h1>${title}</h1>
 </div>
-<div class="row">
-	<div class="col-md-3 col-md-offset-4" style="top:150px;">
+<div class="sa-row">
+	<div class="sa-main-login" style="top:150px;">
 		<form action="LoginController" method="post">
 			<label for="username">Username</label>
 			<input class="form-control" id="username" type="text" name="username" required placeholder="Username">

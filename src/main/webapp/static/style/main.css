@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+html {
+	height: 100%;
+}
+
+body {
+	background: -webkit-linear-gradient(rgba(5, 610, 255, 0.4),
+		rgba(135, 60, 255, 0.0) 80%),
+		-webkit-linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 25%,
+		rgba(255, 160, 65, 0.9) 76%);
+}
+
+.sa-main{
+	width: auto;
+	height: 210mm;
+	padding: 15mm 15mm 15mm 25mm;
+	margin: 20px 20px 20px 20px;
+	box-shadow: 5px 5px 10px black;
+	background-color: white;
+	font-family: "Times New Roman";
+	font-size: 12pt;
+	text-align: center;
+	line-height: 1
+}
+
+.sa-table{
+	width: 350px;
+	border: 2px solid #000000;
+}
+
+.sa-table-header th{
+	border: 2px solid #000000;
+}
+
+.sa-table-body td{
+	border: 1px solid #000000;
+}
